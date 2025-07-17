@@ -1,69 +1,51 @@
-# React + TypeScript + Vite
+# News App Hendra for Eigen Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah Aplikasi Front End React untuk menyelesaikan tugas yang diberikan oleh tim rekrutmen Eigen
 
-Currently, two official plugins are available:
+## Tujuan Aplikasi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Sistem ini dibangun untuk mencapai beberapa tujuan utama, antara lain:
 
-## Expanding the ESLint configuration
+1. **Menampilkan List News:**  
+   Memperlihatkan data list news yang didapatkan ketika get Api dari newsapi.org
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+2. **Melihat Detail News:**  
+   Melihat detail data dari salah satu data yang dipassing dari newsapi.org
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Setup dan Instalasi
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Untuk menjalankan aplikasi ini di sistem Anda, ikuti langkah-langkah berikut:
+
+### 1. Persyaratan Sistem
+
+Pastikan sistem Anda memiliki perangkat lunak berikut:
+- Node.js dan NPM (untuk mengelola dependensi frontend)
+
+### 2. Instalasi
+
+Clone repository ini ke komputer lokal Anda:
+```bash
+git clone https://github.com/hendrayna55/eigen-test-code.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3. Menjalankan Aplikasi
+- Install npm:
+```bash
+npm install
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Build project menjadi production:
+```bash
+npm run build
+```
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Jalankan node development untuk proses development (Hanya saat proses development):
+```bash
+npm run dev
+```
+
+- Jalankan serve dist untuk mengakses project development:
+```bash
+serve -g dist
 ```
